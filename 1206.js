@@ -125,6 +125,11 @@
 // }
 // values(10000,2,20);
 
+
+
+
+
+
 // function greater() {
 //     let a=5;
 //     let b=3;
@@ -167,5 +172,3 @@
 
 
 
-var a;
-console.log(a+2);
