@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Write a program to find the sum of all even numbers in an array using a for loop.
+
+//   Example: let arr = [1, 2, 3, 4, 5,6]
+
+function array(arr){
+
+let sum=0;
+for(i=0;i<arr.length;i++){
+    if(arr[i]%2==0){
+       sum= sum+arr[i];
+       }
+}
+console.log(sum);
+}
+let arr = [1, 2, 3, 4, 5,6];
+array(arr);
+
+
+
+// Use a do-while loop to print the numbers from 1 to 10, but only if the number is not equal to 5.
+
+// Example: let num = 1;
+// Test Case: printNumbers() // Output: 1, 2, 3, 4, 6, 7, 8, 9, 10
+
+function num(i){
+ do{
+  if(i!=5){
+   console.log(i);
+ }
+ i++;
+}
+while (i<=10)
+}  
+num(1) ;
+
+
+
+
+// check whether given input string is palindrome or not?
+// I/p:mom-->is a palindrome
+// I/p:father:--->is not a palindrome.
+
+function st(str){
+let s="";
+let i=0;
+while(i<str.length){
+    s=str[i]+s;
+    i++;
+}
+if(s==str){
+    console.log("palindrome");
+}
+else{
+    console.log("not a palindrome");
+}
+}
+
+st("daddy");
+st("mom");
+
+
+
+// Write a program using a do-while loop to print the numbers from 10 to 1, but only if the number is odd. If the number is even, print "Skipping even number".
+
+// Example: let num = 10;
+// Output: 9, Skipping even number, 7, Skipping even number, 5, Skipping even number, 3, Skipping even number, 1
+
+function  oddeven(num){
+
+  do{
+    if(num%2==1){
+        console.log(num);
+       
+    }
+    else if(num%2==0 && num!=10){
+        console.log("Skipping even number");
+    }
+   
+    num--;
+   
+}
+while(num>0)
+
+}
+oddeven(10);
+
+
+// Write a program using a while loop to find the average of all numbers in an array. 
+// If the average is greater than 50, print "Average is large".
+
+function avg(arr=[a,b,c,d,e]){
+let sum=0;
+let i=0,average;
+let len=arr.length;
+while(i<len){
+    sum=sum+arr[i];
+    i++; 
+}
+average=(sum/len);
+if(average<50){
+  console.log(average);
+}
+else{
+  console.log("average is large"); 
+}
+}
+
+avg([100,200,300,400,500]);
+avg([1,2,3,4,5]);
+
+// 6.
+// *
+// **
+// ***
+// ****
+// *****
+function star(rows){
+for (let i = 1; i <= rows; i++) {
+  let pattern = '';
+  for (let j = 1; j <= i; j++) {
+      pattern += '* ';
+  }
+  console.log(pattern);
+}
+}
+star(5);
+    </script>
+</body>
+</html>
