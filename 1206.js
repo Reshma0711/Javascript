@@ -1,0 +1,171 @@
+// function demo() {
+//     console.log("hi");
+//     return "hello";
+// }
+// demo()
+// console.log(demo()) 
+
+
+// function name() {
+//     return;
+// }
+// console.log(name())
+
+
+// function name() {
+//     let a=5;
+//     let b=5;
+//     return a+b;
+// }
+// console.log(name())
+
+// demo=a=>"a"
+// console.log(demo())
+
+
+// function restaurant(a,b,gst=18){
+//     gstvalue=(a+b)*(gst/100);
+//     total=a+b+gstvalue;
+//     console.log(total)
+//     console.log(gstvalue)
+// }
+// restaurant(5,10);
+
+
+// demo=(a= 4)=>a
+// console.log(demo())
+
+
+// let y=1;
+// let z="hello";
+// console.log(y<z)
+
+// function sum(a,b){
+//     console.log(a+b);
+// }
+// sum(5,6);
+
+// ************************************//
+
+// Write a JavaScript function that takes two numbers and an operator ('+', '-', '*', '/') 
+// as arguments and returns the result of the arithmetic operation.
+
+// function arithmetic(a,b) {
+//      console.log(a+b);
+//      console.log(a-b);
+//      console.log(a*b);
+//      console.log(a/b);
+//      console.log(a%b);
+// }
+// arithmetic(8,9) ;
+
+// let arithmetic=function(a,b){
+//     console.log(a+b);
+//      console.log(a-b);
+//      console.log(a*b);
+//      console.log(a/b);
+//      console.log(a%b);
+// }
+// arithmetic(8,9) ;
+
+
+// (function (a,b) {
+//         console.log(a+b);
+//          console.log(a-b);
+//          console.log(a*b);
+//          console.log(a/b);
+//          console.log(a%b);
+    
+// } (8,9));
+
+
+// arithmetic=(a,b)=>{
+//     console.log(a+b);
+//          console.log(a-b);
+//          console.log(a*b);
+//          console.log(a/b);
+//          console.log(a%b);
+// }
+// arithmetic(8,9);
+
+// **************************************//
+
+
+
+// Write a JavaScript function that takes a number as a argument and returns it's square value
+ 
+// function sq(a) {
+//     console.log(a*a);
+// }
+// sq(5);
+
+//*************************************************************//
+
+
+// Write a JavaScript function that takes two numbers as a arguments and
+//  returns the highest(max ) of the number using terinary operator inside a function
+
+
+// function big(a,b){
+//     a>b?console.log(a):console.log(b)
+// }
+// big(8,9);
+
+// ********************************************************//
+
+
+// Write a javascript function which takes three arguments  (amount , rate of interest, no of years ) 
+// returns the total value of interest
+
+// function values(p,t,r){
+//     interest=(p*t*r)/100;
+//     total=p+interest;
+//     console.log(interest);
+//     console.log(total);
+// }
+// values(10000,2,20);
+
+// function greater() {
+//     let a=5;
+//     let b=3;
+
+//     result=a>b?"a":"b";
+//     console.log(result)
+   
+// }
+// console.log(greater());
+
+// function sum(a,b) {
+//  return a+b;
+// }
+// console.log(sum(4,5));
+
+
+
+
+// function para(){
+//     let a=10;
+//     let b=20;
+//     result=a>b?a:b;
+//     console.log(result);
+
+// }
+//     para();
+// let i=1;
+// for(i=1;i<=10;i++)
+//     {
+//         console.log("2x"+"i"+ "=" 
+
+//         );
+//     }
+
+// let i=2;
+
+// console.log("2x"+i+"="+2*i);
+// console.log(`2x${i}=${2*i}`)
+
+
+
+
+var a;
+console.log(a+2);

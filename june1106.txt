@@ -1,0 +1,224 @@
+1.console.log(10 + 10);    
+20
+2.console.log(10 + "10"); 
+1010
+3.console.log(10 + +"10"); 
++"10" is a unary operator. 10+10=20.
+4.console.log(10+"10"+10);  
+101010,string always gives priority for concatenation.
+5.console.log(10+ +"10" + 10);
+30
+6.console.log(10 - "2")
+8
+7.console.log(10 - "2" - "8");
+0
+8.console.log(10+"2" - "2");
+102-2=100
+9.console.log(10>9>8);
+10>9 is true than true>9 will be false.
+as they both are different datatypes.
+10.console.log(10 * "10");
+100
+11.console.log(100 / "100");
+1
+12.console.log(100/"0");
+infinity
+13.console.log(100 + +"100" - "100" * "100");
+-9800
+here we will follow bodmas rule
+14.console.log(1 == "1");
+true here both the values are equal.
+15.console.log(1 === "1");
+here we have to compare the values and datatypes.
+so the condition will be false.
+16.console.log(1 == "one");
+here we are comparing number and string. so the condition will be false.
+17.console.log(1 === "one");
+false here both values and datatypes are different.
+18.console.log(1+true);
+2 because true value means 1 so 1+1=2
+19.console.log(1 - true);
+0
+20.console.log(1 + true - false);
+2
+21.console.log("1" + true);
+1truehere 1 is string and true is Boolean, Here concatenation will occur.
+22.console.log(+"1" + true);
++"1" will gives value and it is added to true value.
+23.console.log(undefined == undefined);
+true
+24.console.log(undefined === undefined);
+true
+25.console.log(null == null);
+true
+26.console.log(null === null);
+true
+27.console.log(undefined == null);
+true
+28.console.log(undefined === null);
+false Because null is an object and undefined is an undefined type
+29.console.log(2+NaN);
+NaN
+30.console.log("2"+NaN);
+2NaN
+31.console.log("2"+undefined);
+2undefined
+32.console.log(2+undefined);
+when one of the operand is undefined then output will be NaN.
+33.console.log(typeof "123");
+string
+34.console.log(typeof 2);
+Number
+35.console.log(typeof true);
+boolean
+36.console.log(typeof undefined);
+undefined
+37.console.log(typeof null);
+object
+38.console.log(typeof []);
+object
+39.console.log(typeof 1n);
+bigint
+40.console.log(typeof 1n+2n);
+
+41.console.log(typeof 1+2n);
+bigint2
+42.console.log(typeof 1/1n);
+error
+42.console.log(typeof 1%1n);
+error
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1. What is the value of x after the operation: x = 5 + 3 * 2;?
+11
+
+2. What is the value of y after the operation: y = 12 - 4 / 2;?
+10
+
+3. What is the value of z after the operation: z = 7 + 2 * 3 - 1;?
+12
+
+4. What is the value of a after the operation: a = 9 % 3 + 2;?
+2
+
+5. What is the value of b after the operation: b = 15 / 3 * 2;?
+10
+
+6. What is the value of c after the operation: c = 24 >> 2;?
+6
+
+7. What is the value of d after the operation: d = 17 & 3;?
+1
+
+8. What is the value of e after the operation: e = 28 ^ 2;?
+30
+
+9. What is the value of f after the operation: f = 11 + 3 << 2;?
+56
+
+10. What is the value of g after the operation: g = 25 - 5 | 3;?
+23
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+1. What is the value of granted after the operation:
+
+let username = "admin";
+let password = "password";
+let granted = (username === "admin" && password === "password") ? true : false;
+
+sol:::   true because here
+string===string && string===string; true&&true--true
+
+
+2. What is the value of message after the operation:
+
+let username = "user";
+let password = "wrongpassword";
+let message = (username === "admin" && password === "password") ? "Login successful!" : "Invalid credentials.";
+
+Sol::  Invalid  credentials (user===admin && wrongpassword === password; false&&false; false)
+ so  Invalid  credentials will be the output
+
+
+
+3. What is the value of access after the operation:
+
+let username = "admin";
+let password = "password";
+let access = (username === "admin" || password === "password") ? "Granted" : "Denied";
+
+ sol::  granted (admin===admin ||  password===password ; true || true: true);
+so granted will be output
+
+
+
+4. What is the value of status after the operation:
+
+let username = "";
+let password = "password";
+let status = (username !== "" && password === "password") ? "Logged in" : "Please enter username and password";
+
+sol::  (false && true; false) so output will be   Please enter username and password
+
+
+5. What is the value of authenticated after the operation:
+
+let username = "admin";
+let password = "wrongpassword";
+let authenticated = (username === "admin" && password === "password") ? true : false;
+
+sol::  false
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+1. What is the value of name after the operation:
+
+let user = { name: "John" };
+let name = user?.name ?? "Unknown";
+
+sol:: here we are getting a value so john will be output.
+
+
+2. What is the value of price after the operation:
+
+let product = { price: null };
+let price = product?.price ?? "N/A";
+
+sol:: here we are getting null as a value so the output will be default message and it is N/A.
+
+
+3. What is the value of address after the operation:
+
+let customer = { address: { street: "123 Main St" } };
+let address = customer?.address?.street ?? "Not available";
+
+sol:: 123 Main St  here we are getting a value so john will be output.
+
+
+
+4. What is the value of phone after the operation:
+
+let contact = { phone: null };
+let phone = contact?.phone ?? "Not provided";
+
+sol:: not provided   here we are getting null as a value so the output will be default message and it is not provided
+
+
+5. What is the value of description after the operation:
+
+let item = { description: "" };
+let description = item?.description ?? "No description available";
+
+sol:: here we are not getting null or undefined so output will be the empty string.
+
+
+
+
+
+
+
