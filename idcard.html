@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .logo {
+        width: 25%;
+        height: 20%;
+      }
+      .heading {
+        font-size: 1.5em;
+        margin-top: -50px;
+        margin-left: 30px;
+      }
+      .lisa {
+        width: 35%;
+        height: 30%;
+        margin-left: 35%;
+        margin-top: 10%;
+      }
+      .data {
+        border: 2px solid black;
+        width: 50px;
+        height: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      let x = document.createElement("div");
+      document.body.appendChild(x);
+      x.style.height = "55vh";
+      x.style.width = "45vw";
+      x.style.border = "2px solid black";
+      x.style.margin = "auto auto";
+      x.style.backgroundColor = "orange";
+      let y = document.createElement("h1");
+      y.textContent = "10000CODERS";
+      y.setAttribute("class", "heading");
+      y.style.textAlign = "center";
+      let ban = document.createElement("img");
+      ban.src = "./10000coders.png";
+      ban.setAttribute("class", "logo");
+      x.appendChild(ban);
+      x.appendChild(y);
+      z = document.createElement("img");
+      z.setAttribute("class", "lisa");
+      z.src = "./lisa.webp";
+      x.appendChild(z);
+      
+
+      let name = document.createElement("div");
+      x.appendChild(name);
+
+      let name1 = document.createElement("h3");
+      name1.textContent = "Name: Lisa";
+      name.appendChild(name1);
+
+      let name2 = document.createElement("h3");
+      name2.textContent = "Contact: 9999955555";
+      name.appendChild(name2);
+
+      let name3 = document.createElement("h3");
+      name3.textContent = "mailid: lisa07@gmail.com";
+      name.appendChild(name3);
+      
+    </script>
+  </body>
+</html>
