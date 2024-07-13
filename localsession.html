@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    div{
+        display: grid;
+         place-items: center;
+        width: 25%;
+        margin: auto auto;
+        margin-top: 10%;
+        background-image: linear-gradient(yellow,rgb(203, 237, 251));
+    }
+    table, td {
+      border: 2px solid black;
+      border-collapse: collapse;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+    <div>
+  <form id="frm"><br>
+    <input type="text" id="txt1" placeholder="Name" /><br><br>
+    <input type="text" id="txt2" placeholder="City" /><br><br> 
+    <input type="submit" id="btn1" value="Click!" /><br><br>
+    <table class="tab">
+      <tr>
+        <td>Name</td>
+        <td>City</td>
+      </tr>
+    </table>
+  </form>
+  </div>
+  <script>
+    // Selecting elements
+    const frm = document.getElementById("frm");
+    const txt1 = document.getElementById("txt1");
+    const txt2 = document.getElementById("txt2");
+    const btn1 = document.getElementById("btn1");
+    const tab = document.querySelector(".tab"); 
+
+    // Function to add row to table and store data in session and local storage
+    function addRowAndStoreData(name, city) {
+      // Create new table row
+      const newRow = document.createElement("tr");
+
+      // Create new table data cells for name and city
+      const nameCell = document.createElement("td");
+      nameCell.textContent = name;
+      const cityCell = document.createElement("td");
+      cityCell.textContent = city;
+
+      // Append cells to the new row
+      newRow.appendChild(nameCell);
+      newRow.appendChild(cityCell);
+
+      // Append new row to the table
+      tab.appendChild(newRow);
+
+      // Store data in session storage
+      const data = {
+        name: name,
+        city: city
+      };
+      sessionStorage.setItem('userData', JSON.stringify(data));
+
+      // Store data in local storage
+      localStorage.setItem('userData', JSON.stringify(data));
+    }
+
+    // Event listener for form submit
+    frm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      // Get input values
+      const name = txt1.value;
+      const city = txt2.value;
+
+      // Add row to table and store data
+      addRowAndStoreData(name, city);
+
+      // Clear input fields
+      txt1.value = "";
+      txt2.value = "";
+    });
+
+    // Function to display stored data from storage on page load
+    function displayStoredData() {
+      const storedData = JSON.parse(localStorage.getItem('userData'));
+
+      if (storedData) {
+        // Create new table row
+        const newRow = document.createElement("tr");
+
+        // Create new table data cells for name and city
+        const nameCell = document.createElement("td");
+        nameCell.textContent = storedData.name;
+        const cityCell = document.createElement("td");
+        cityCell.textContent = storedData.city;
+
+        // Append cells to the new row
+        newRow.appendChild(nameCell);
+        newRow.appendChild(cityCell);
+
+        // Append new row to the table
+        tab.appendChild(newRow);
+      }
+    }
+
+    // Display stored data on page load
+    displayStoredData();
+  </script>
+</body>
+</html>
