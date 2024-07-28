@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+          display: flex;
+          flex-wrap: wrap;
+          gap: 5px;
+          margin: auto auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+       
+    </div>
+    <script>
+        container1=document.getElementById("container")
+        let data=fetch("https://fakestoreapi.com/products");
+
+        data.then((e)=>e.json()).then((e)=>{
+            // console.log(e);
+             let res=e;
+
+       for(i of res) {
+
+
+      let div=document.createElement("div")
+      div.style.backgroundColor= "lightgreen";
+      div.style.width="25vw"
+      div.style.border="2px solid black";
+      div.style.display="flex"
+      div.style.flexDirection="column"
+      div.style.alignContent="center"
+      div.style.gap="5px"
+
+  
+
+
+      let div1=document.createElement("div")
+      let h2=document.createElement("h2")
+      h2.innerHTML=i.id
+      div1.appendChild(h2)
+      div.appendChild(div1)
+     
+
+
+
+      let div2=document.createElement("div")
+      let h3=document.createElement("h3")
+       h3.innerHTML=i.title
+       div2.appendChild(h3)
+      h3.style.fontsize="5px"
+      div2.style.textAlign="center"
+      div2.style.backgroundColor="yellow"
+    //   div2.style.width="100%"
+    //   div2.style.height="3vh"
+      div.appendChild(div2)
+
+
+    
+      let div3=document.createElement("div")
+      let img=document.createElement("img")
+      img.src=i.image;
+        div3.appendChild(img)
+        img.style.height="50vh"
+        img.style.width="75%"
+        div3.style.display="flex"
+        img.style.border="2px solid black"
+        div3.style.justifyContent="center"
+       div.appendChild(div3)
+      
+
+
+      let div4=document.createElement("div")
+      let description=document.createElement("p")
+       description.innerHTML=i.description
+         div4.appendChild(description)
+         description.style.color="grey"
+         description.style.fontSize="15px"
+       div.appendChild(div4)
+
+
+
+     let div5=document.createElement("div")
+      let price=document.createElement("h3")
+    let rating=document.createElement("h3")
+     div5.style.backgroundColor="lightpink"
+     div5.style.height="10%"
+      div5.style.width="100%"
+      div5.style.display="flex"
+      div5.style.justifyContent="space-around"
+      price.innerHTML=`Price:${i.price}`
+     div5.appendChild(price)
+     rating.innerHTML=`Rating:${i.rating.rate}`
+    div5.appendChild(rating)
+     div.appendChild(div5)
+
+
+
+
+
+
+      
+      
+     
+    
+     console.log(i)
+
+        
+        
+        
+        
+        
+        
+
+
+
+         
+        container1.appendChild(div)
+       }
+     
+              } )
+      
+        
+        
+    </script>
+</body>
+</html>
