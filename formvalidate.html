@@ -1,0 +1,107 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            outline: none;
+        }
+        .container {
+            display: grid;
+            place-items: center;
+            width: 80vw;
+            margin: auto;
+        }
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2px;
+        }
+        img {
+            width: 50%;
+            height: auto;
+            max-width: 100%;
+        }
+        .frm {
+            display: flex;
+            flex-direction: column;
+        }
+        .frm input {
+            display: block;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        #err1, #err2, #err3, #err4 {
+            display: none;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfJABsWNEIl5U7HBpD3JhntRE1O-z_jzxinntFLyoHyYMlx3rpRvWBUYCexWLoeHx5NXs&usqp=CAU" alt="Logo">
+            <h3>REGISTER HERE!</h3>
+        </div>
+        <div class="frm">
+            <form id="form1">
+                <input type="text" id="username" placeholder="Enter UserName"><br>
+                <input type="email" id="email" placeholder="Enter email"><br>
+                <input type="text" id="userid" placeholder="Create Id (Reshma28)" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,10}"><br>
+                <span id="err1">Username doesn't meet the requirements</span>
+                <input type="password" id="userpswd" placeholder="Create Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{6,}">
+                <span id="err2">Password must contain letters, numbers, and special characters with a minimum length of 6 characters</span><br>
+                <input type="password" id="cnfrmpswd" placeholder="Confirm Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{6,}">
+                <span id="err3">Passwords don't match</span><br>
+                <input type="submit" id="submit1" style="background-color: green; border: none; color: white;"><br>
+                <span id="err4">All fields must be filled</span>
+            </form>
+        </div>
+    </div>
+    <script>
+        const form1 = document.getElementById("form1");
+        const username = document.getElementById("username");
+        const email = document.getElementById("email");
+        const userid = document.getElementById("userid");
+        const userpswd = document.getElementById("userpswd");
+        const cnfrmpswd = document.getElementById("cnfrmpswd");
+        const err1 = document.getElementById("err1");
+        const err2 = document.getElementById("err2");
+        const err3 = document.getElementById("err3");
+        const err4 = document.getElementById("err4");
+
+        form1.addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            if (username.value === "" || email.value === "" || userid.value === "" || userpswd.value === "" || cnfrmpswd.value === "") {
+                err4.style.display = "block";
+               
+            } else if (userid.value.length < 6 || userid.value.length > 10) {
+                err1.style.display = "block";
+            } else if (userpswd.value.length < 6) {
+                err2.style.display = "block";
+            } else if (userpswd.value !== cnfrmpswd.value) {
+                err3.style.display = "block";
+            } else {
+                // Form submission success
+                alert("Form submitted successfully!");
+                form1.reset(); // Reset form fields
+              let xx= window.confirm("Do you want to log in the page?")
+               if(xx){
+                  location.assign("https://www.10000coders.in/")
+               }
+              
+            }
+        });
+    </script>
+</body>
+</html>
